@@ -14,7 +14,8 @@ Bot for a reddit sub that requires the OP to provide a statement for link posts 
 # How to
 
 1) Download collapse.py and config.py and place them into the same folder
-2) In collapse.py, you need to set the following configurations at the top of the script
+2) In config.py, place your bot login details (U+P), and your client ID and client secret from reddit API
+3) In collapse.py, you need to set the following configurations at the top of the script
    - Subreddits to watch over (multreddits are okay, but untested)
    - User Agent - use a better description, or leave as is
    - Number of hours before a post is removed
