@@ -10,3 +10,14 @@ Bot for a reddit sub that requires the OP to provide a statement for link posts 
 # Tested on
 - Windows 10
 - Raspberry Pi 3B+
+
+# How to
+
+1) Download collapse.py and config.py and place them into the same folder
+2) In collapse.py, you need to set the following configurations at the top of the script
+   - Subreddits to watch over (multreddits are okay, but untested)
+   - User Agent - use a better description, or leave as is
+   - Number of hours before a post is removed
+   - Reply comment body for the bot to reply with
+   - Number of seconds to sleep between checks (default to 5 minutes for most subs is fine)
+   - RGX - This is regex - don't touch this if you don't understand this
