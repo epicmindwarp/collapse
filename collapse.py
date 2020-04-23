@@ -10,13 +10,16 @@ import config
 
 # Created by /u/epicmindwarp
 # 2020-04-03
+RGX_SENTENCE_3 = r'(?:.*?\.)(?:.*?\.)(?:.*?\.)'     # Don't touch if you don't understand
 
-SUB_NAME    = 'collapse'
-USER_AGENT  = f'Post Removal Bot Bot for /r/{SUB_NAME} - v0.1'
 
-RGX_SENTENCE_3 = r'(?:.*?\.)(?:.*?\.)(?:.*?\.)'
+SUB_NAME    = 'collapse'    # Set subreddit here
+
+USER_AGENT  = f'Post Removal Bot Bot for /r/{SUB_NAME} - v0.1'      # Info for reddit API
 
 MINIMUM_HOURS = 2       # Number of hours a post must be
+
+SLEEP_SECONDS = 300     # Number of seconds to sleep between scans (300 = 5 minutes)
 
 REMOVAL_REPLY = '''
 Your post has been removed due to failing to submit a submission statement within 2 hours of posting.
@@ -164,9 +167,6 @@ if __name__ == "__main__":
     except Exception as e:
         print('\t\n### ERROR - Could not connect to reddit.')
         sys.exit(1)
-
-    # Number of seconds to sleep between scans (300 = 5 minutes)
-    SLEEP_SECONDS = 300       
 
     # A list of posts already valid, keep this in memory so we don't keep checking these
     valid_posts = []
